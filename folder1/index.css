@@ -5,7 +5,7 @@ main{
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr;
     min-height: 100%;
-    gap:5px;
+    gap:2px;
 }
 .panel{
     display: grid;
@@ -66,3 +66,28 @@ main{
     } 
 }
  
+@media screen and (max-width:960px) {
+    main{
+        grid-template-columns: 100%;
+        grid-template-rows: 400px 400px 400px;
+    }
+    .panel.about{
+        grid-row: 2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .panel img{
+        width: 100%;
+    } 
+}
+@media screen and (max-width:600px) {
+    main{
+        grid-template-rows: 600px 500px 500px;
+    }
+    .panel.about, .panle.photos{
+        grid-template-columns: 1fr;
+        grid-column: span 1;
+        grid-template-rows: 1fr 1fr;
+        border-bottom: 1px solid #dcdc;
+    }
+}
